@@ -24,7 +24,7 @@ class IndexController extends Controller
         $news = $this->indexRepository->getNews($url);
         $images = $this->indexRepository->getNewsImages($url);
 
-        return view('home', compact('title', 'news' , 'images'));
+        return view('home', compact('title', 'news', 'images'));
     }
-
+    
 }

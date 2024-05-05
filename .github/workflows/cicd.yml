@@ -1,0 +1,15 @@
+name: cicd
+on:
+  push:
+    branches:
+      - main
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        
+      - name: publish
+        run: |
+          php index.php
